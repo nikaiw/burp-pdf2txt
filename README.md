@@ -7,4 +7,4 @@ This could be useful for:
 - Using burp search filters to find data in those pdf 
 - Attacking PDF generators.
 
-Take heed that it will perform the transformation on every requests sent through Burp.
+Take heed that it will perform the transformation on every requests sent through Burp and  original PDF won't be kept in memory. (at least in this version)
