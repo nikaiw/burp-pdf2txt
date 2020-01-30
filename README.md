@@ -8,3 +8,11 @@ This could be useful for:
 - Attacking PDF generators.
 
 Take heed that it will perform the transformation on every requests sent through Burp and  original PDF won't be kept in memory. (at least in this version)
+
+#### Todo (or not todo)
+
+- Change content-type in response
+- Give the ability to select which tools answers to overwrite
+- Allow user to just display an IMessageEditorTab to keep original data 
+- Insert PDF metadata in answer
+- Provide images in answers (as base64/html?)
