@@ -1,5 +1,7 @@
 package com.pdf2txt;
+
 import burp.*;
+
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
