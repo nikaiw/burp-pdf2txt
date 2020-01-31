@@ -43,7 +43,7 @@ public class PdfParser {
         } catch (IOException ex) {
             System.out.println("Error writing to file " + ex);
         } catch (InterruptedException ex) {
-            System.out.println("Error paring page " + ex);
+            System.out.println("Error parsing page " + ex);
         } catch (PDFException ex) {
             System.out.println("Error parsing PDF document " + ex);
         } catch (PDFSecurityException ex) {
