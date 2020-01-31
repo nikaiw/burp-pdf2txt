@@ -12,52 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PdfParser {
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
-        FontPropertiesManager.getInstance().loadOrReadSystemFonts();
-        String filePath = args[0];
-        Document document = new Document();
-        try {
-            document.setFile(filePath);
-        } catch (PDFException ex) {
-            System.out.println("Error parsing PDF document " + ex);
-        } catch (PDFSecurityException ex) {
-            System.out.println("Error encryption not supported " + ex);
-        } catch (FileNotFoundException ex) {
-            System.out.println("Error file not found " + ex);
-        } catch (IOException ex) {
-            System.out.println("Error handling PDF document " + ex);
-        }
-
-        try {
-            BufferedOutputStream out = new BufferedOutputStream(System.out);
-            for (int pageNumber = 0, max = document.getNumberOfPages();
-            pageNumber < max; pageNumber++) {
-                PageText pageText = document.getPageText(pageNumber);
-                if (pageText != null && pageText.getPageLines() != null) {
-                    ArrayList<LineText> pageLines = pageText.getPageLines();
-
-                    for (LineText lineText : pageLines) {
-                        List<WordText> mylist = lineText.getWords();
-                        for (WordText e: mylist) {
-                            System.out.print(e.getText());
-
-                        }
-                    }
-                }
-            }
-
-            // close the writer
-            out.flush();
-            out.close();
-        } catch (IOException ex) {
-            System.out.println("Error writing to file " + ex);
-        } catch (InterruptedException ex) {
-            System.out.println("Error paring page " + ex);
-        }
-        // clean up resources
-        document.dispose();
-        }
-
     public static String parse(byte[] pdf) throws IllegalAccessException, InstantiationException {
         StringBuffer sb = new StringBuffer();
         FontPropertiesManager.getInstance().loadOrReadSystemFonts();
