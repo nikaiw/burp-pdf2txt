@@ -14,5 +14,5 @@ Take heed that it will perform the transformation on every requests sent through
 - Change content-type in response
 - Give the ability to select which tools answers to overwrite
 - Allow user to just display an IMessageEditorTab to keep original data 
-- Insert PDF metadata in answer
+- ~Insert PDF metadata in answer~
 - Provide images in answers (as base64/html?)
